@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="ListBuilder.css">
+  <script src = "ListBuilder.js"></script>
+</head>
+<body>
+<section class = "flex-container">
+
+<section>
+
+<h1>List Builder</h1>
+<form name ="myForm">
+  <span>
+  Word to List: <input type = "text" id = "input" name = "input">
+</span>
+
+<div></div>
+
+
+<span>
+  List 1 or 2 : <input type = "text" id = "list" name = "list">
+</span>
+
+<div></div>
+
+<input type="button" value="Submit" onclick="valid()">
+</form>
+
+</section>
+
+<section>
+
+<p1>List 1</p1>
+<div></div>
+<p1 id="list1"></p1>
+<div></div>
+
+<button onclick="clearListOne()">Clear List</button>
+
+</section>
+
+<section>
+
+  <p1>List 2</p1>
+  <div></div>
+<p1 id="list2"></p1>
+<div></div>
+
+
+  <button onclick="clearListTwo()">Clear List</button>
+  
+  </section>
+
+
+</section>
+</body>
+</html>
