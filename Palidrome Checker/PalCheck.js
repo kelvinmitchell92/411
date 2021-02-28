@@ -21,7 +21,7 @@ function valid() {
     return false;
   }
   if( y != "1" && y != "2"){
-    alert("List Must be 1 or 2");
+    alert("Algorithm Must be 1 or 2");
     return false;
   }
   if(z!="Yes" && z!= "No" && z!= "yes" && z!= "no"){
@@ -54,6 +54,7 @@ function valid() {
 
   document.forms["myForm"]["input"].value = "";
   document.forms["myForm"]["list"].value ="";
+  document.forms["myForm"]["case"].value ="";
 
   document.getElementById("list1").innerHTML = list1;
   document.getElementById("list2").innerHTML = list2;
