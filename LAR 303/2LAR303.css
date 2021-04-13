@@ -59,20 +59,15 @@ linked{
   border-bottom-color: #fff;
 }
 html{
-  background: url(img.gif) no-repeat center fixed;
-  background-size:cover;
+
   display:table-cell;
+  
 }
 img{
 
  position:absolute;
  bottom:0;
+ left:0;
 
  
-}
-a{
-  width:150px;
-  height: 150px;
-  vertical-align: bottom;
-  
 }
