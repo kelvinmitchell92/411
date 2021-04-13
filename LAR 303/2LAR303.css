@@ -1,0 +1,78 @@
+/*
+ * Globals
+ */
+
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+body {
+  display:flex;
+  justify-content: flex-end;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+
+}
+linked{
+  font-weight: bold;
+  font-size: larger;
+  color:white;
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+html{
+  background: url(img.gif) no-repeat center fixed;
+  background-size:cover;
+  display:table-cell;
+}
+img{
+
+ position:absolute;
+ bottom:0;
+
+ 
+}
+a{
+  width:150px;
+  height: 150px;
+  vertical-align: bottom;
+  
+}
