@@ -16,3 +16,9 @@ async function get(){
  document.getElementById("quote").innerHTML = JSON.stringify(json.content);
  document.getElementById("author").innerHTML = JSON.stringify(json.author);
   }
+
+function video(){
+
+  document.getElementById("video").innerHTML =  <img src="butterfly.mov" alt="ButterFly Poem" ></img>
+
+}
