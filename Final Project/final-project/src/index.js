@@ -115,11 +115,7 @@ class Entry extends React.Component {
 
 
   render(){
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"></link>
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"></link>
-    
-</head>
+
     return (
       
 
@@ -145,7 +141,7 @@ class Entry extends React.Component {
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fonts">PokeDex</h1>
+        <h1 class="fonts dark:text-white">PokeDex</h1>
         <p class="lead text-muted">Please correctly spell the Pokemon you wish to learn more about below. </p>
         <p>
           <input type = "text" name="input" id = "input" onChange={this.myEventHandler}  required/><br></br>
@@ -161,54 +157,54 @@ class Entry extends React.Component {
 
       <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 g-2">
         <div class="col">
-          <div class="card shadow-sm">
+          <div class="card shadow-lg">
             <Image  src ={this.state.pic1}  alt = "Front of Pokemon" ></Image>
-            <p class = "card-text">Normal</p>
+            <p class = "center text-grey">Normal</p>
 
             <div class="card-body">
-              <p class="card-text">Name : {this.state.name}    No.{this.state.index} </p>
-              <p class="card-text">Description : {this.state.description}</p>
-              <p class="card-text">Ability : {this.state.ability}</p>
+              <p class="center text-grey">Name : {this.state.name}    No.{this.state.index} </p>
+              <p class="center text-grey">Description : {this.state.description}</p>
+              <p class="center text-grey">Ability : {this.state.ability}</p>
        
             </div>
           </div>
         
        
           
-          <div class="card shadow-sm">
+          <div class="card shadow-lg">
           <Image  src ={this.state.pic3}  alt = "Front of Shiny Pokemon" ></Image>
-          <p class = "card-text">Shiny</p>
+          <p class = "center text-grey">Shiny</p>
 
             <div class="card-body">
-            <p class="card-text">Super Effective Against : {this.state.superEffective} </p>
-            <p class="card-text">Not Very Effective Against : {this.state.semiEffective} </p>
-            <p class="card-text">Not Effective Against : {this.state.notEffective} </p>
+            <p class="center text-grey">Super Effective Against : {this.state.superEffective} </p>
+            <p class="center text-grey">Not Very Effective Against : {this.state.semiEffective} </p>
+            <p class="center text-grey">Not Effective Against : {this.state.notEffective} </p>
             
             </div>
           </div>
 
         </div>
         <div class="col">
-        <div class="card shadow-sm">
+        <div class="card shadow-lg">
           <Image  src ={this.state.pic2}  alt = "Back of Pokemon" ></Image>
-          <p class = "card-text">Normal Back</p>
+          <p class = "center text-grey">Normal Back</p>
 
             <div class="card-body">
-            <p class="card-text">Height : {this.state.height}   Weight : {this.state.weight} </p>
-            <p class="card-text">Evolves From : {this.state.evolution}</p>
-            <p class="card-text">Type : {this.state.type}   Type 2 : {this.state.type2} </p>
+            <p class="center text-grey">Height : {this.state.height}   Weight : {this.state.weight} </p>
+            <p class="center text-grey">Evolves From : {this.state.evolution}</p>
+            <p class="center text-grey">Type : {this.state.type}   Type 2 : {this.state.type2} </p>
         
             </div>
           </div>
        
 
-          <div class="card shadow-sm">
+          <div class="card shadow-lg">
           <Image  src ={this.state.pic4}  alt = "Back of Shiny Pokemon" ></Image>
-          <p class = "card-text">Shiny Back</p>
+          <p class = "center text-grey">Shiny Back</p>
             <div class="card-body">
-            <p class="card-text">Receives Double Damge from : {this.state.weakAgainst} </p>
-            <p class="card-text">Recieves Half Damage from : {this.state.strongAgainst} </p>
-            <p class="card-text">Recieves No Damage from : {this.state.hasNoEffect} </p>
+            <p class="center text-grey">Receives Double Damge from : {this.state.weakAgainst} </p>
+            <p class="center text-grey">Recieves Half Damage from : {this.state.strongAgainst} </p>
+            <p class="center text-grey">Recieves No Damage from : {this.state.hasNoEffect} </p>
              
             </div>
           </div>
