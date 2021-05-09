@@ -1,6 +1,5 @@
 import React from 'react';
 import Nav from './components/Nav'
-import ReactDOM from 'react-dom';
 import 'C:/Users/Sassy/IST411/Final Retry/my-app/src/Styles/main.css';
 import Image from 'react-bootstrap/Image';
 
