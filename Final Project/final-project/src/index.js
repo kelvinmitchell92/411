@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './assets/main.css';
 import 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'react-bootstrap/Image';
-
-
-  
-
+import Toggle from './toggle'
+import ThemeProvider from './themes'
+import Background from './background'
 
 class Entry extends React.Component {
 
@@ -34,8 +33,11 @@ class Entry extends React.Component {
       strongAgainst:"",
       hasNoEffect : "", 
       evolution:"",
+      dark:"",
     };
   }
+
+
 
 
    myPoke = async () =>{
@@ -110,7 +112,17 @@ class Entry extends React.Component {
     this.setState({[nam]:val});
   }
 
+  darkMode = (event) =>{
 
+    if(this.state.dark === "dark"){
+      this.setState({dark:""});
+    }else{
+      this.setState({dark:"dark"});
+    }
+
+alert(this.state.dark);
+
+  }
 
 
 
@@ -122,31 +134,37 @@ class Entry extends React.Component {
       <body>
       <header>
 
-
-  <div class="navbar navbar-dark bg-dark shadow-sm">
+<div>
+  <div class="navbar navbar-dark bg-white shadow-sm dark:bg-gray-50" >
       <div class="container">
       <a href="http://www.pokemon.com" class="navbar-brand d-flex align-items-center">
-      <span class="material-icons red md-36">catching_pokemon</span>
-        <strong>PokeDex</strong>
+      <span class="material-icons">catching_pokemon</span>
+        <strong class="text-dark dark:text-white">PokeDex</strong>
       </a>
 
 
 
     </div>
   </div>
+  </div>
 </header>
 
 
 
   <section class="py-5 text-center container">
+  <div class = "float-end text-muted">
+  <Toggle />
+  <p>Dark Mode</p>
+  </div>
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class = "text-success dark:text-danger">FOR THE LOVE OF GOD CHANGE COLORS</h1>
         <h1 class="fonts dark:text-white">PokeDex</h1>
-        <p class="lead text-muted">Please correctly spell the Pokemon you wish to learn more about below. </p>
+        <p class="lead text-muted">Please correctly spell the Pokemon you wish to learn more about below.</p>
         <p>
           <input type = "text" name="input" id = "input" onChange={this.myEventHandler}  required/><br></br>
  
-          <button class="btn btn-primary my-2" onClick={this.myPoke} >Submit</button>
+          <button class="btn btn-danger my-2" onClick={this.myPoke} >Submit</button>
         </p>
       </div>
     </div>
@@ -159,12 +177,12 @@ class Entry extends React.Component {
         <div class="col">
           <div class="card shadow-lg">
             <Image  src ={this.state.pic1}  alt = "Front of Pokemon" ></Image>
-            <p class = "center text-grey">Normal</p>
+            <p class = "text-center">Normal</p>
 
             <div class="card-body">
-              <p class="center text-grey">Name : {this.state.name}    No.{this.state.index} </p>
-              <p class="center text-grey">Description : {this.state.description}</p>
-              <p class="center text-grey">Ability : {this.state.ability}</p>
+              <p class="text-center">Name : {this.state.name}    No.{this.state.index} </p>
+              <p class="text-center">Description : {this.state.description}</p>
+              <p class="text-center">Ability : {this.state.ability}</p>
        
             </div>
           </div>
@@ -173,12 +191,12 @@ class Entry extends React.Component {
           
           <div class="card shadow-lg">
           <Image  src ={this.state.pic3}  alt = "Front of Shiny Pokemon" ></Image>
-          <p class = "center text-grey">Shiny</p>
+          <p class = "text-center">Shiny</p>
 
             <div class="card-body">
-            <p class="center text-grey">Super Effective Against : {this.state.superEffective} </p>
-            <p class="center text-grey">Not Very Effective Against : {this.state.semiEffective} </p>
-            <p class="center text-grey">Not Effective Against : {this.state.notEffective} </p>
+            <p class="text-center">Super Effective Against : {this.state.superEffective} </p>
+            <p class="text-center">Not Very Effective Against : {this.state.semiEffective} </p>
+            <p class="text-center">Not Effective Against : {this.state.notEffective} </p>
             
             </div>
           </div>
@@ -187,12 +205,12 @@ class Entry extends React.Component {
         <div class="col">
         <div class="card shadow-lg">
           <Image  src ={this.state.pic2}  alt = "Back of Pokemon" ></Image>
-          <p class = "center text-grey">Normal Back</p>
+          <p class = "text-center">Normal Back</p>
 
             <div class="card-body">
-            <p class="center text-grey">Height : {this.state.height}   Weight : {this.state.weight} </p>
-            <p class="center text-grey">Evolves From : {this.state.evolution}</p>
-            <p class="center text-grey">Type : {this.state.type}   Type 2 : {this.state.type2} </p>
+            <p class="text-center">Height : {this.state.height}   Weight : {this.state.weight} </p>
+            <p class="text-center">Evolves From : {this.state.evolution}</p>
+            <p class="text-center">Type : {this.state.type}   Type 2 : {this.state.type2} </p>
         
             </div>
           </div>
@@ -200,11 +218,11 @@ class Entry extends React.Component {
 
           <div class="card shadow-lg">
           <Image  src ={this.state.pic4}  alt = "Back of Shiny Pokemon" ></Image>
-          <p class = "center text-grey">Shiny Back</p>
+          <p class = "text-center">Shiny Back</p>
             <div class="card-body">
-            <p class="center text-grey">Receives Double Damge from : {this.state.weakAgainst} </p>
-            <p class="center text-grey">Recieves Half Damage from : {this.state.strongAgainst} </p>
-            <p class="center text-grey">Recieves No Damage from : {this.state.hasNoEffect} </p>
+            <p class="text-center">Receives Double Damge from : {this.state.weakAgainst} </p>
+            <p class="text-center">Recieves Half Damage from : {this.state.strongAgainst} </p>
+            <p class="text-center">Recieves No Damage from : {this.state.hasNoEffect} </p>
              
             </div>
           </div>
@@ -245,7 +263,14 @@ class Entry extends React.Component {
 }
 
 ReactDOM.render(
-  <Entry />,
-  document.getElementById('root')
+  <React.StrictMode>
+    <ThemeProvider>
+      <Background>
+     <Entry />
+      </Background>
+    </ThemeProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
+
 
